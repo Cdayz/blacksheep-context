@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "blacksheep-context"
-version = "0.1.6"
+version = "0.1.0"
 description = "Middleware for blacksheep that allows you to store and access the context data of a request."
 authors = ["Nikita Tomchik <cdayz@yandex.ru>"]
 license = "MIT"
