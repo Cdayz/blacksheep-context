@@ -1,0 +1,38 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "blacksheep-context"
+version = "0.1.6"
+description = "Middleware for blacksheep that allows you to store and access the context data of a request."
+authors = ["Nikita Tomchik <cdayz@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Cdayz/blacksheep-context"
+repository = "https://github.com/Cdayz/blacksheep-context"
+keywords = ["blacksheep", "context", "middleware", "blacksheep-context"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+]
+include = [
+    "LICENSE",
+]
+exclude = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+blacksheep = ">=1.0.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-xdist = "^2.2.1"
+pytest-cov = "^2.12.1"
+tox = "^3.23.1"
+isort = "^5.8.0"
+flake8 = "^3.9.2"
+pytest-asyncio = "^0.15.1"
