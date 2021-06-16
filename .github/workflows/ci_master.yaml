@@ -1,0 +1,56 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "v[0-9]*.[0-9]*.[0-9]*"
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.7, 3.8, 3.9]
+    container:
+      image: python:${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@master
+      - id: install
+        name: Install requirements
+        run: make install
+      - id: isort
+        name: Imports order checking
+        run: make isort-check
+      - id: flake8
+        name: Code lint
+        run: make flake8-lint
+      - id: tests
+        name: Tests
+        run: make tests
+      - id: codecov
+        name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.2
+        # Run on a specific python version and only master branch commits
+        if: matrix.python == 3.8 && github.event_name == 'push' && github.ref == 'refs/heads/master'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: test-results/coverage.xml
+  release:
+    needs: test
+    name: Release a new version
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.8
+    steps:
+      - uses: actions/checkout@master
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+      - id: publish
+        name: Publish version
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+        run: make publish-to-pypi
+        env:
+          PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          PYPI_PUBLISH_TOKEN: ${{ secrets.PYPI_PUBLISH_TOKEN }}
