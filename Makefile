@@ -11,10 +11,10 @@ build: deps
 	poetry build
 
 isort-check: deps
-	poetry run isort blacksheep_prometheus --check-only
+	poetry run isort blacksheep_context --check-only
 
 flake8-lint: deps
-	poetry run flake8 blacksheep_prometheus
+	poetry run flake8 blacksheep_context
 
 .PHONY: tests
 tests: deps
