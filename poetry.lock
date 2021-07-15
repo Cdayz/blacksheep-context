@@ -30,7 +30,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "blacksheep"
-version = "1.0.8"
+version = "1.0.9"
 description = "Fast web framework and HTTP client for Python asyncio"
 category = "main"
 optional = false
@@ -44,7 +44,7 @@ essentials-openapi = ">=0.1.4,<1.0"
 guardpost = ">=0.0.7,<0.1.0"
 httptools = ">=0.2.0,<0.3.0"
 itsdangerous = "1.1.0"
-Jinja2 = "2.11.3"
+Jinja2 = "3.0.1"
 python-dateutil = "2.8.1"
 rodi = ">=1.1.1,<1.2.0"
 typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
@@ -215,17 +215,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "jinja2"
-version = "2.11.3"
+version = "3.0.1"
 description = "A very fast and expressive template engine."
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = ">=3.6"
 
 [package.dependencies]
-MarkupSafe = ">=0.23"
+MarkupSafe = ">=2.0"
 
 [package.extras]
-i18n = ["Babel (>=0.8)"]
+i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "markupsafe"
@@ -505,16 +505,16 @@ attrs = [
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
 blacksheep = [
-    {file = "blacksheep-1.0.8-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:c5ac94fafe36225b0b483ff85f2608daa3cad7d7e78c2d50dea732b28007460e"},
-    {file = "blacksheep-1.0.8-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:438c1d2276759964c31924a36661a4891dac3535450444c575d23e016f8678ec"},
-    {file = "blacksheep-1.0.8-cp37-cp37m-win_amd64.whl", hash = "sha256:8b7a02bb144061ca7931775e5aac236e792818b2fd8660f586ce1fd2ca79f9b5"},
-    {file = "blacksheep-1.0.8-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:184cdceccf11335133c7bda66d06a9c96320d3211f7cafac3c339eb738469414"},
-    {file = "blacksheep-1.0.8-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:80551b97615deb414097e119c0c826b25e60d2a3a24de1bf097cf9108cbb5b7e"},
-    {file = "blacksheep-1.0.8-cp38-cp38-win_amd64.whl", hash = "sha256:478ce99864922f3a5a2ba18b95cd17a35738b21e67853c4191503a5e8246c783"},
-    {file = "blacksheep-1.0.8-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:27ed462801c1b032b407f7d78b68d7c9aa1361d55c943007d4613541059f8a33"},
-    {file = "blacksheep-1.0.8-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:844053d9c80950ceda9b5b4c77651ca52db9bbbccf4eb4aefa6b6c8f0261fb47"},
-    {file = "blacksheep-1.0.8-cp39-cp39-win_amd64.whl", hash = "sha256:b32f1d1aed168a01ff9c7ebc3d35e5a71b63dda5e0607d66c61cf15765b5d832"},
-    {file = "blacksheep-1.0.8.tar.gz", hash = "sha256:e74156e4c5bee9960da3585c202b843c8c796d1f5e43c54c7c7e5283861ebc27"},
+    {file = "blacksheep-1.0.9-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:78dbebce506f2019c81a73a29c4f099797a8907aea79698b14e8e1479dc29e86"},
+    {file = "blacksheep-1.0.9-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:c3a6421ca5f6276b1d41f3c4a56fe61f5401d002c8823d253c7e6aa3225be8e5"},
+    {file = "blacksheep-1.0.9-cp37-cp37m-win_amd64.whl", hash = "sha256:663bc54a71c68bd78bfea6e7d9970ad2089e9a69dd6f468c484d1e18b692f0e2"},
+    {file = "blacksheep-1.0.9-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:9b7165b5b806fb9da34967bcb85893f387e58f53250867ac4cd9a3a5d798b656"},
+    {file = "blacksheep-1.0.9-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:b046dda875883825dacf232c1e7d526246fcede5447af38b933a63eace4f1d1e"},
+    {file = "blacksheep-1.0.9-cp38-cp38-win_amd64.whl", hash = "sha256:3952270fc640cb9480c9be0a7e481c1c8efb8857435a40757de238c6a15216de"},
+    {file = "blacksheep-1.0.9-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:7a476e4e6538bc19344867bf07e151762c57eb33c6fa0d795abbc1a3c666dd0e"},
+    {file = "blacksheep-1.0.9-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:bf11f57f6f7fa888b9c1c4a8cd02ee3ca6a85e77e2182d2b75bce8dd33ec4a8b"},
+    {file = "blacksheep-1.0.9-cp39-cp39-win_amd64.whl", hash = "sha256:d87ceb3a2e20dc8727f20e5a537e5c8ce160201d0e582632be489458b21b5924"},
+    {file = "blacksheep-1.0.9.tar.gz", hash = "sha256:9fe1772347af7c90bda110d7d3681b77f472970fc2f091c3e301bbc2f8f39dbc"},
 ]
 cchardet = [
     {file = "cchardet-2.1.7-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:c6f70139aaf47ffb94d89db603af849b82efdf756f187cdd3e566e30976c519f"},
@@ -671,8 +671,8 @@ itsdangerous = [
     {file = "itsdangerous-1.1.0.tar.gz", hash = "sha256:321b033d07f2a4136d3ec762eac9f16a10ccd60f53c0c91af90217ace7ba1f19"},
 ]
 jinja2 = [
-    {file = "Jinja2-2.11.3-py2.py3-none-any.whl", hash = "sha256:03e47ad063331dd6a3f04a43eddca8a966a26ba0c5b7207a9a9e4e08f1b29419"},
-    {file = "Jinja2-2.11.3.tar.gz", hash = "sha256:a6d58433de0ae800347cab1fa3043cebbabe8baa9d29e668f1c768cb87a333c6"},
+    {file = "Jinja2-3.0.1-py3-none-any.whl", hash = "sha256:1f06f2da51e7b56b8f238affdd6b4e2c61e39598a378cc49345bc1bd42a978a4"},
+    {file = "Jinja2-3.0.1.tar.gz", hash = "sha256:703f484b47a6af502e743c9122595cc812b0271f661722403114f71a79d0f5a4"},
 ]
 markupsafe = [
     {file = "MarkupSafe-2.0.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:f9081981fe268bd86831e5c75f7de206ef275defcb82bc70740ae6dc507aee51"},
