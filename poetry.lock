@@ -366,7 +366,7 @@ pytest = ">=3.10"
 
 [[package]]
 name = "pytest-xdist"
-version = "2.3.0"
+version = "2.4.0"
 description = "pytest xdist plugin for distributed testing and loop-on-failing modes"
 category = "dev"
 optional = false
@@ -379,6 +379,7 @@ pytest-forked = "*"
 
 [package.extras]
 psutil = ["psutil (>=3.0)"]
+setproctitle = ["setproctitle"]
 testing = ["filelock"]
 
 [[package]]
@@ -489,7 +490,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "6e65f710e3e25aa35c501d823543390a76dd589e1f415ca75695d820c488a79c"
+content-hash = "b93b23b58a467f26b2c08008f968450597af294ed783c49d9b91985ba993ba46"
 
 [metadata.files]
 appdirs = [
@@ -790,8 +791,8 @@ pytest-forked = [
     {file = "pytest_forked-1.3.0-py2.py3-none-any.whl", hash = "sha256:dc4147784048e70ef5d437951728825a131b81714b398d5d52f17c7c144d8815"},
 ]
 pytest-xdist = [
-    {file = "pytest-xdist-2.3.0.tar.gz", hash = "sha256:e8ecde2f85d88fbcadb7d28cb33da0fa29bca5cf7d5967fa89fc0e97e5299ea5"},
-    {file = "pytest_xdist-2.3.0-py3-none-any.whl", hash = "sha256:ed3d7da961070fce2a01818b51f6888327fb88df4379edeb6b9d990e789d9c8d"},
+    {file = "pytest-xdist-2.4.0.tar.gz", hash = "sha256:89b330316f7fc475f999c81b577c2b926c9569f3d397ae432c0c2e2496d61ff9"},
+    {file = "pytest_xdist-2.4.0-py3-none-any.whl", hash = "sha256:7b61ebb46997a0820a263553179d6d1e25a8c50d8a8620cd1aa1e20e3be99168"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
